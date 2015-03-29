@@ -11,13 +11,15 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zeis/vim-kolor'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'zenorocha/dracula-theme',{'rtp':'vim/'}
 call vundle#end()
 
 set number
 syntax enable
 set background=dark
 let g:solarized_termcolors = 256
-colorscheme kolor
+colorscheme dracula
 
 filetype plugin indent on
 
@@ -35,3 +37,5 @@ set expandtab
 set autoindent
 set smartindent
 set hlsearch
+set ignorecase
+set smartcase
