@@ -48,6 +48,16 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # User configuration
+export FSEM=~/fs-easymotion
+source $FSEM/easycd.sh
+source $FSEM/easygrep.sh
+source $FSEM/easyfind.sh
+
+alias u='easyCdUp'
+alias f='easyFind'
+alias ff='easyFindOpen'
+alias g='easyGrep'
+alias gg='easyGrepOpen'
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -58,7 +68,7 @@ source ~/.bashrc
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-EDITOR = 'vim'
+export EDITOR='vim'
 export TERM=xterm-256color
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
