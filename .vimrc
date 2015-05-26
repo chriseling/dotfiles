@@ -12,14 +12,15 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zeis/vim-kolor'
 Plugin 'derekwyatt/vim-scala'
-Plugin 'zenorocha/dracula-theme',{'rtp':'vim/'}
+Plugin 'Lokaltog/vim-easymotion'
+
 call vundle#end()
 
 set number
 syntax enable
 set background=dark
 let g:solarized_termcolors = 256
-colorscheme dracula
+colorscheme kolor
 
 filetype plugin indent on
 
