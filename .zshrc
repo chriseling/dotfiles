@@ -5,7 +5,8 @@ export ZSH=/Users/vshen/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
+export DEFAULT_USER="vshen"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,6 +59,8 @@ alias f='easyFind'
 alias ff='easyFindOpen'
 alias g='easyGrep'
 alias gg='easyGrepOpen'
+
+export EASYCD_REPLACE_FIRST_CHAR=0
 
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
