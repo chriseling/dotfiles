@@ -66,7 +66,6 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-source ~/.bashrc
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -94,3 +93,8 @@ export TERM=xterm-256color
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias gs='git status'
+alias gl='git log'
+alias gp='git pull'
+alias gd='git diff'
+
