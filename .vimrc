@@ -71,3 +71,6 @@ augroup reload_vimrc " {
         autocmd!
             autocmd BufWritePost $MYVIMRC source $MYVIMRC
         augroup END " }"
+
+"Highlight trailing whitespace with error
+match ErrorMsg '\s\+$'
