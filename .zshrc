@@ -49,7 +49,7 @@ export DEFAULT_USER="vshen"
 plugins=(git)
 
 # User configuration
-export FSEM=~/fs-easymotion
+export FSEM=~/dotfiles/fs-easymotion
 source $FSEM/easycd.sh
 source $FSEM/easygrep.sh
 source $FSEM/easyfind.sh
