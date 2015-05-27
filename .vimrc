@@ -14,6 +14,7 @@ Plugin 'zeis/vim-kolor'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 
@@ -49,6 +50,9 @@ set hlsearch
 set ignorecase
 set smartcase
 set term=screen-256color
+set laststatus=2
+set statusline=%f
+set statusline+=%{fugitive#statusline()}
 
 augroup reload_vimrc " {
         autocmd!
