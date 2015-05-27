@@ -71,6 +71,9 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 export EDITOR='vim'
+export USE_EDITOR=$EDITOR
+export VISUAL=$EDITOR
+
 export TERM=xterm-256color
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -97,4 +100,10 @@ alias gs='git status'
 alias gl='git log'
 alias gp='git pull'
 alias gd='git diff'
+alias tmux='tmux -2'
+
+# convenience aliases for editing configs
+alias ev='vim ~/.vimrc'
+alias et='vim ~/.tmux.conf'
+alias ez='vim ~/.zshrc'
 
