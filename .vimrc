@@ -1,5 +1,4 @@
 set nocompatible
-filetype off
 
 "Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
