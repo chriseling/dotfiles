@@ -27,11 +27,13 @@ filetype plugin indent on
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+let g:netrw_liststyle=3
+map <c-k> ;Explore<cr> 
+
 set listchars=tab:>~,nbsp:_,trail:.
 nnoremap ; :
 nnoremap : ;
-
-autocmd vimenter * NERDTree
 
 set backspace=indent,eol,start
 set tabstop=4
