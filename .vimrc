@@ -27,6 +27,9 @@ colorscheme kolor
 
 filetype plugin indent on
 
+"Map leader key
+let mapleader = ","
+
 "Ctrl-P plugin commands
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
