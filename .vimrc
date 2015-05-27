@@ -17,6 +17,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 
