@@ -107,7 +107,7 @@ alias gs='git status'
 alias tmux='tmux -2'
 
 # convenience aliases for editing configs
-alias ev='vim ~/dotfiles/.vimrc'
-alias et='vim ~/dotfiles/.tmux.conf'
-alias ez='vim ~/dotfiles/.zshrc'
+alias ev='vim ~/.vimrc'
+alias et='vim ~/.tmux.conf'
+alias ez='vim ~/.zshrc'
 
