@@ -18,6 +18,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
+Plugin 'ap/vim-css-color'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 call vundle#end()
 
@@ -88,3 +91,7 @@ augroup reload_vimrc " {
 
 "Highlight trailing whitespace with error
 match ErrorMsg '\s\+$'
+
+"Enable indent guides by default
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
