@@ -41,3 +41,4 @@ set hlsearch
 set ignorecase
 set smartcase
 set term=screen-256color
+
