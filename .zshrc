@@ -98,6 +98,7 @@ export TERM=xterm-256color
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ga='git add'
+alias gc='git commit -m'
 alias gd='git diff'
 alias gl='git log'
 alias gp='git pull'
