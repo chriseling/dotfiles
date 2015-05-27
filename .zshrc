@@ -96,10 +96,12 @@ export TERM=xterm-256color
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gs='git status'
+
+alias ga='git add'
+alias gd='git diff'
 alias gl='git log'
 alias gp='git pull'
-alias gd='git diff'
+alias gs='git status'
 alias tmux='tmux -2'
 
 # convenience aliases for editing configs
