@@ -16,6 +16,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 
@@ -68,6 +69,15 @@ set term=screen-256color
 set laststatus=2
 set statusline=%f
 set statusline+=%{fugitive#statusline()}
+"More status line(airline) stuff
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.whitespace = 'Ξ'
 
 "Reload vimrc on update
 augroup reload_vimrc " {
