@@ -31,7 +31,6 @@ set listchars=tab:>~,nbsp:_,trail:.
 nnoremap ; :
 nnoremap : ;
 
-map <C-t> :NERDTreeToggle<CR>
 autocmd vimenter * NERDTree
 
 set backspace=indent,eol,start
