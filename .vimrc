@@ -13,6 +13,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zeis/vim-kolor'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
 
 call vundle#end()
 
@@ -29,6 +30,9 @@ let g:ctrlp_cmd = 'CtrlP'
 set listchars=tab:>~,nbsp:_,trail:.
 nnoremap ; :
 nnoremap : ;
+
+map <C-t> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
 
 set backspace=indent,eol,start
 set tabstop=4
