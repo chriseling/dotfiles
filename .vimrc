@@ -41,7 +41,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
-map <c-k> ;Explore<cr> 
+map <c-k> ;Explore<cr>
 
 set listchars=tab:>~,nbsp:_,trail:.
 
