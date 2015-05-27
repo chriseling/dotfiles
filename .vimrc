@@ -21,6 +21,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
 
@@ -44,13 +45,19 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 "Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
-map <c-k> ;Explore<cr>
+map <C-e> ;Explore<cr>
 
 set listchars=tab:>~,nbsp:_,trail:.
 
 "Remap colon to semicolon cuz lazy
 nnoremap ; :
 nnoremap : ;
+
+"Map Ctrl-HJKL to switch between vim windows and tmux panes
+map <C-H> <C-W>h
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-L> <C-W>l
 
 "Tab and indent stuff
 set backspace=indent,eol,start
