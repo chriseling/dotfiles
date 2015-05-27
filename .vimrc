@@ -52,12 +52,6 @@ set listchars=tab:>~,nbsp:_,trail:.
 nnoremap ; :
 nnoremap : ;
 
-"Map Ctrl-HJKL to switch between vim windows and tmux panes
-map <C-H> <C-W>h
-map <C-J> <C-W>j
-map <C-K> <C-W>k
-map <C-L> <C-W>l
-
 "Tab and indent stuff
 set backspace=indent,eol,start
 set tabstop=4
