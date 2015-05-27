@@ -50,3 +50,7 @@ set ignorecase
 set smartcase
 set term=screen-256color
 
+augroup reload_vimrc " {
+        autocmd!
+            autocmd BufWritePost $MYVIMRC source $MYVIMRC
+        augroup END " }"
