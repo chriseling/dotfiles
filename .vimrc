@@ -63,8 +63,7 @@ set term=screen-256color
 
 "Status line stuff
 set laststatus=2
-set statusline=%f
-set statusline+=%{fugitive#statusline()}
+set statusline=%{fugitive#statusline()}
 
 "Reload vimrc on update
 augroup reload_vimrc " {
