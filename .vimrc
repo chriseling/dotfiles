@@ -1,6 +1,6 @@
 set nocompatible
 
-"Plugins
+" Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -32,27 +32,28 @@ colorscheme kolor
 
 filetype plugin indent on
 
-"Map leader key
+" Map leader key
 let mapleader = ","
 
-"Ctrl-P plugin commands
+" Ctrl-P plugin commands
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-"Vim explorer mode shortcut and nerdtree-like display
+" Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
 map <C-e> ;Explore<cr>
 
 set listchars=tab:>~,nbsp:_,trail:.
+set virtualedit=onemore
 
-"Remap colon to semicolon cuz lazy
+" Remap colon to semicolon cuz lazy
 nnoremap ; :
 nnoremap : ;
 
-"Tab and indent stuff
+" Tab and indent stuff
 set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
@@ -61,19 +62,24 @@ set expandtab
 set autoindent
 set smartindent
 
-"Search stuff
+" Search stuff
+set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 
-"Make colors correct
+" Scrolling stuff
+set scrolljump=5
+set scrolloff=3
+
+" Make colors correct
 set term=screen-256color
 
-"Status line stuff
+" Status line stuff
 set laststatus=2
 set statusline=%f
 set statusline+=%{fugitive#statusline()}
-"More status line(airline) stuff
+" More status line(airline) stuff
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -83,16 +89,16 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.whitespace = 'Ξ'
 
-"Reload vimrc on update
+" Reload vimrc on update
 augroup reload_vimrc " {
         autocmd!
             autocmd BufWritePost $MYVIMRC source $MYVIMRC
         augroup END " }"
 
-"Highlight trailing whitespace with error
+" Highlight trailing whitespace with error
 match ErrorMsg '\s\+$'
 
-"Enable indent guides by default
+" Enable indent guides by default
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 let g:indent_guides_auto_colors = 0
