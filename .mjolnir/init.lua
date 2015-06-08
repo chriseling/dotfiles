@@ -57,4 +57,4 @@ hotkey.bind({"cmd", "ctrl"}, "Right", function()
   win:setframe(f)
 end)
 
-hotkey.bind({"cmd", "ctrl"}, "e", hints.windowHints)
+hotkey.bind({"cmd", "ctrl"}, "q", hints.windowHints)
