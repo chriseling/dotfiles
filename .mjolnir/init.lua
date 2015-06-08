@@ -1,10 +1,12 @@
+local alert = require "mjolnir.alert"
 local application = require "mjolnir.application"
-local hotkey = require "mjolnir.hotkey"
-local window = require "mjolnir.window"
 local fnutils = require "mjolnir.fnutils"
-local screen = require "mjolnir.screen"
+local grid = require "mjolnir.bg.grid"
 local hints = require "mjolnir.th.hints"
+local hotkey = require "mjolnir.hotkey"
 local modal_hotkey = require("mjolnir._asm.modal_hotkey").inject()
+local screen = require "mjolnir.screen"
+local window = require "mjolnir.window"
 
 hotkey.bind({"cmd", "ctrl"}, "R", function()
   mjolnir.reload()
