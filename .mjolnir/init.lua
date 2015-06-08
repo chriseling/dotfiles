@@ -3,6 +3,8 @@ local hotkey = require "mjolnir.hotkey"
 local window = require "mjolnir.window"
 local fnutils = require "mjolnir.fnutils"
 local screen = require "mjolnir.screen"
+local hints = require "mjolnir.th.hints"
+local modal_hotkey = require("mjolnir._asm.modal_hotkey").inject()
 
 hotkey.bind({"cmd", "ctrl"}, "R", function()
   mjolnir.reload()
@@ -52,3 +54,5 @@ hotkey.bind({"cmd", "ctrl"}, "Right", function()
   f.h = max.h
   win:setframe(f)
 end)
+
+hotkey.bind({"cmd", "ctrl"}, "e", hints.windowHints)
