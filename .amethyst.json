@@ -1,0 +1,11 @@
+"layouts": [
+    "tall",
+    "fullscreen",
+    "floating",
+    "widescreen-tall",
+    "wide",
+],
+"mouse-follows-focus": true,
+"floating": [
+    "com.apple.systempreferences"
+],
