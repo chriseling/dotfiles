@@ -115,3 +115,6 @@ set splitbelow splitright
 
 " Wrap characters on lines that exceed 80 characters in length
 set colorcolumn=80
+
+" Allow saving of files as sudo when forgot to start vim using sudo.
+cmap w!! w !sudo tee > /dev/null %
