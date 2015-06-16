@@ -51,7 +51,6 @@ set virtualedit=onemore
 
 " Remap colon to semicolon cuz lazy
 nnoremap ; :
-nnoremap : ;
 
 " Tab and indent stuff
 set backspace=indent,eol,start
