@@ -20,6 +20,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'JazzCore/ctrlp-cmatcher'
 
 call vundle#end()
 
@@ -38,13 +39,14 @@ let mapleader = ","
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*/generated/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*generated/*,*img/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 20000
 let g:path_to_matcher = "~/matcher/matcher"
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
-let g:ctrlp_match_func = { 'match': 'GoodMatch' }
+let g:ctrlp_match_func = { 'match': 'matcher#cmatch' }
+let g:ctrlp_by_filename = 1
 function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
 
 	" Create a cache file if not yet exists

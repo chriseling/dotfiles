@@ -114,6 +114,10 @@ alias ez='vim ~/.zshrc'
 # alias for sudo
 alias oops='sudo $(fc -ln -1)'
 
+# Fixing compiler for better Ctrlp-Vim matching
+export CFLAGS=-Qunused-arguments
+export CPPFLAGS=-Qunused-arguments
+
 #-----------------------------BOX SPECIFIC CONFIG-----------------------------
 # alias for box root directory
 alias c='cd /box/www/current_local'
