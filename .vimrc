@@ -44,7 +44,6 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 20000
 let g:path_to_matcher = "~/matcher/matcher"
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
 let g:ctrlp_match_func = { 'match': 'matcher#cmatch' }
 let g:ctrlp_by_filename = 1
 function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
