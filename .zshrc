@@ -113,3 +113,16 @@ alias ez='vim ~/.zshrc'
 
 # alias for sudo
 alias oops='sudo $(fc -ln -1)'
+
+#-----------------------------BOX SPECIFIC CONFIG-----------------------------
+# alias for box root directory
+alias c='cd /box/www/current_local'
+
+# work aliases
+alias wsy='work sync'
+alias wsa='work save'
+alias wr='work review'
+alias wt='work test'
+
+# add devtools to PATH
+export PATH=/usr/local/bin:/box/www/devtools_readonly/bin:$PATH

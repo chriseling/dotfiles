@@ -19,7 +19,6 @@ Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()
@@ -39,13 +38,43 @@ let mapleader = ","
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+set wildignore+=*/tmp/*,*/generated/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_max_files = 20000
+let g:path_to_matcher = "~/matcher/matcher"
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
+let g:ctrlp_match_func = { 'match': 'GoodMatch' }
+function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
+
+	" Create a cache file if not yet exists
+	let cachefile = ctrlp#utils#cachedir().'/matcher.cache'
+	if !( filereadable(cachefile) && a:items == readfile(cachefile) )
+		call writefile(a:items, cachefile)
+	endif
+	if !filereadable(cachefile)
+		return []
+	endif
+
+	" a:mmode is currently ignored. In the future, we
+	"should probably do
+	" something about that. the matcher behaves like
+	"full-line".
+	let cmd = g:path_to_matcher.' --limit '.a:limit.' --manifest '.cachefile.' '
+	if !( exists('g:ctrlp_dotfiles') && g:ctrlp_dotfiles )
+		let cmd = cmd.'--no-dotfiles '
+	endif
+	let cmd = cmd.a:str
+
+	return split(system(cmd), "\n")
+
+endfunction
 
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
 map <C-e> ;Explore<cr>
 
+set list
 set listchars=tab:>~,nbsp:_,trail:.
 set virtualedit=onemore
 
@@ -55,11 +84,11 @@ nnoremap ; :
 " Tab and indent stuff
 set backspace=indent,eol,start
 set tabstop=4
-set softtabstop=4
+set softtabstop=0
 set shiftwidth=4
-set expandtab
-set autoindent
-set smartindent
+set noexpandtab
+set copyindent
+set preserveindent
 
 " Search stuff
 set incsearch
@@ -97,12 +126,8 @@ augroup reload_vimrc " {
 " Highlight trailing whitespace with error
 match ErrorMsg '\s\+$'
 
-" Enable indent guides by default
-let g:indent_guides_enable_on_vim_startup=1
-let g:indent_guides_guide_size=1
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+" Remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Open help in a vertical split instead of the default horizontal split
 " http://vim.wikia.com/wiki/Replace_a_builtin_command_using_cabbrev
