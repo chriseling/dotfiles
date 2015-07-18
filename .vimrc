@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
@@ -13,12 +12,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zeis/vim-kolor'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
+Plugin 'goldfeld/vim-seek'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
-Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'JazzCore/ctrlp-cmatcher'
 
