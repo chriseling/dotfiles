@@ -65,11 +65,11 @@ nnoremap ; :
 " Tab and indent stuff
 set backspace=indent,eol,start
 set tabstop=4
-set softtabstop=0
 set shiftwidth=4
-set noexpandtab
-set copyindent
-set preserveindent
+" Using hard tabs for javascript, html, tmpl
+autocmd Filetype * setlocal sts=0 noexpandtab copyindent preserveindent
+" Using 4 spaces for php
+autocmd Filetype php setlocal sts=4 expandtab autoindent smartindent
 
 " Search stuff
 set incsearch
