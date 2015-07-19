@@ -43,33 +43,8 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_height = 20
 let g:ctrlp_match_window = 'results:30'
-let g:path_to_matcher = "~/matcher/matcher"
 let g:ctrlp_match_func = { 'match': 'matcher#cmatch' }
 let g:ctrlp_by_filename = 1
-function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
-
-	" Create a cache file if not yet exists
-	let cachefile = ctrlp#utils#cachedir().'/matcher.cache'
-	if !( filereadable(cachefile) && a:items == readfile(cachefile) )
-		call writefile(a:items, cachefile)
-	endif
-	if !filereadable(cachefile)
-		return []
-	endif
-
-	" a:mmode is currently ignored. In the future, we
-	"should probably do
-	" something about that. the matcher behaves like
-	"full-line".
-	let cmd = g:path_to_matcher.' --limit '.a:limit.' --manifest '.cachefile.' '
-	if !( exists('g:ctrlp_dotfiles') && g:ctrlp_dotfiles )
-		let cmd = cmd.'--no-dotfiles '
-	endif
-	let cmd = cmd.a:str
-
-	return split(system(cmd), "\n")
-
-endfunction
 
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
