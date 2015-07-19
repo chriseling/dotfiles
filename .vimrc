@@ -12,13 +12,14 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zeis/vim-kolor'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'goldfeld/vim-seek'
+Plugin 'justinmk/vim-sneak'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 
@@ -32,6 +33,10 @@ filetype plugin indent on
 
 " Map leader key
 let mapleader = ","
+
+" Vim-Sneak config
+let g:sneak#s_next = 1
+let g:sneak#use_ic_scs = 1
 
 " Ctrl-P plugin commands
 let g:ctrlp_map = '<c-p>'
