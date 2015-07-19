@@ -20,6 +20,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'JazzCore/ctrlp-cmatcher'
 Plugin 'rking/ag.vim'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
