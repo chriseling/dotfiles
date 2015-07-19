@@ -51,6 +51,10 @@ let g:ctrlp_match_window = 'results:30'
 let g:ctrlp_match_func = { 'match': 'matcher#cmatch' }
 let g:ctrlp_by_filename = 1
 
+" Ag.vim binds
+" Make ag always search from root directory
+let g:ag_working_path_mode="r"
+
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
 map <C-e> ;Explore<cr>
