@@ -84,7 +84,7 @@ let g:netrw_liststyle=3
 map <C-e> ;Explore<cr>
 
 set list
-set listchars=tab:>~,nbsp:_,trail:.
+set listchars=tab:\|-,nbsp:_,trail:.
 set virtualedit=onemore
 
 " Remap colon to semicolon cuz lazy
@@ -94,10 +94,14 @@ nnoremap ; :
 set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
+set copyindent
+set preserveindent
+set autoindent
+
 " Using hard tabs for javascript, html, tmpl
-autocmd Filetype * setlocal sts=0 noexpandtab copyindent preserveindent
+autocmd Filetype * setlocal sts=0 noexpandtab
 " Using 4 spaces for php
-autocmd Filetype php setlocal sts=4 expandtab autoindent smartindent
+autocmd Filetype php setlocal sts=4 expandtab
 
 " Search stuff
 set incsearch
