@@ -119,7 +119,6 @@ set term=screen-256color
 " Status line stuff
 set laststatus=2
 set statusline=%f
-set statusline+=%{fugitive#statusline()}
 " More status line(airline) stuff
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -129,6 +128,8 @@ let g:airline_right_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.whitespace = 'Ξ'
+let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#hunks#non_zero_only = 1
 
 " Reload vimrc on update
 augroup reload_vimrc " {
