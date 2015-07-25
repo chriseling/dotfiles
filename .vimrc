@@ -30,6 +30,20 @@ set background=dark
 let g:solarized_termcolors = 256
 colorscheme kolor
 
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" Turn off backups
+set nobackup
+set nowb
+set noswapfile
+
 filetype plugin indent on
 
 " Map leader key
@@ -55,6 +69,15 @@ let g:ctrlp_by_filename = 1
 " Ag.vim binds
 " Make ag always search from root directory
 let g:ag_working_path_mode="r"
+" Make Ag.vim not automatically open first search result, and
+" ignore case
+ca Ag Ag! -i -p '~/.agignore' --ignore-dir test --ignore-dir css
+ca Agt Ag! -i -p '~/.agignore' --ignore-dir css
+ca Agc Ag! -i -p '~/.agignore' --ignore-dir test
+ca Agtc Ag! -i
+
+" Make delimitMate stop expanding < into <>
+let delimitMate_matchpairs = "(:),[:],{:}"
 
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
