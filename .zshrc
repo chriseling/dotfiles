@@ -62,7 +62,7 @@ alias gg='easyGrepOpen'
 
 export EASYCD_REPLACE_FIRST_CHAR=0
 
-export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"
+export PATH="/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -125,7 +125,7 @@ alias c='cd /box/www/current_local'
 # work aliases
 alias wsy='work sync'
 alias wsa='work save'
-alias wr='work review'
+alias wr='~/review.sh'
 alias wt='work test'
 
 # add devtools to PATH

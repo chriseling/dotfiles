@@ -6,7 +6,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ervandew/supertab'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'zeis/vim-kolor'
@@ -18,7 +18,7 @@ Plugin 'bling/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'JazzCore/ctrlp-cmatcher'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'rking/ag.vim'
 Plugin 'airblade/vim-gitgutter'
 
@@ -57,14 +57,15 @@ let g:sneak#use_ic_scs = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*/tmp/*,*/generated/*,*/img/*,*.so,*.swp,*.zip
+set wildignore+=*vendor/*,*/tmp/*,*/generated/*,*/img/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_show_hidden = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_max_height = 20
-let g:ctrlp_match_window = 'results:30'
-let g:ctrlp_match_func = { 'match': 'matcher#cmatch' }
+let g:ctrlp_match_window = 'results:20'
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 let g:ctrlp_by_filename = 1
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_clear_cache_on_exit = 0
 
 " Ag.vim binds
 " Make ag always search from root directory
@@ -83,7 +84,6 @@ let delimitMate_matchpairs = "(:),[:],{:}"
 let g:netrw_liststyle=3
 map <C-e> ;Explore<cr>
 
-set list
 set listchars=tab:\|-,nbsp:_,trail:.
 set virtualedit=onemore
 
@@ -102,6 +102,8 @@ set autoindent
 autocmd Filetype * setlocal sts=0 noexpandtab
 " Using 4 spaces for php
 autocmd Filetype php setlocal sts=4 expandtab
+" Template file syntax highlighting
+au BufRead,BufNewFile *.tmpl set filetype=html
 
 " Search stuff
 set incsearch
@@ -119,6 +121,7 @@ set term=screen-256color
 " Status line stuff
 set laststatus=2
 set statusline=%f
+set statusline+=%{fugitive#statusline()}
 " More status line(airline) stuff
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -127,9 +130,14 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#whitespace#show_message = 0
+" Remove encoding
+let g:airline_section_y = ''
+" Remove percentage/line#/col#
+let g:airline_section_z = ''
 
 " Reload vimrc on update
 augroup reload_vimrc " {
@@ -156,3 +164,10 @@ set colorcolumn=80
 
 " Allow saving of files as sudo when forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+" Set color of vertical split border
+"set fillchars=vert:\│
+"hi VertSplit ctermbg=green ctermfg=green term=NONE
+"
+" Proper pasting from outside applications
+set pastetoggle=<F2>
