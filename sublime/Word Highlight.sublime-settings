@@ -1,0 +1,7 @@
+{
+	"highlight_when_selection_is_empty": true,
+	"highlight_word_under_cursor_when_selection_is_empty" : true,
+	"color_scope_name" : "wordhighlight",
+	"show_word_highlight_status_bar_message" : false,
+	// "draw_outlined": false
+}

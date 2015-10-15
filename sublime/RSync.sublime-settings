@@ -1,0 +1,62 @@
+{
+	"strsync.hosts" : [
+		{
+			// hostname for your remote files
+            "remote_host" : "vshen.dev.box.net",
+			// username in remote server.
+            "remote_user" : "vshen",
+            // path in remote server. Mandatory
+            "remote_path" : "/box/www/current",
+            // if this is the "main" server, used in remote-to-local sync
+            "main"		  : true,
+        },
+	],
+	// local path where your work files are located
+    "strsync.local_path" : "/box/www/current_local",
+    // compare remote/local git hashes to make sure you don't overwrite remote files
+    "strsync.check_remote_git" : false,
+    // what do you want to exclude from *all* syncs? usual file patterns.
+    "strsync.excludes" : [
+        "ak/",
+        "applets/",
+        "api/",
+        "bc/",
+        "captcha_fonts/",
+        "cgi-bin/",
+        "devedit/",
+        "dl/",
+        "down/",
+        "downloads/",
+        "elqNow/",
+        "geoip/",
+        "img/",
+        "lists/",
+        "notice/",
+        "partners/",
+        "static/",
+        "thumbs/",
+        "translations/",
+        "xhprof_html/",
+        "xhprof_lib/",
+        ".*/",
+        "fonts/",
+        "mac/",
+        "modules/",
+        "target/",
+        "toolbar/",
+        "*.iml",
+        "templates/cmpl/",
+    ],
+    // do you want to rsync over ssh. If you're using a remote server, you
+    // really should use ssh...
+    "strsync.use_ssh"           : true,
+    // defines if the authoritative copy copy is in the remote host. If so,
+    // syncing the tree will run from the host to local, deleting the local
+    // files which aren't in the master.
+    // if false, the local is the master, and will be considered the
+    // authoritative copy
+    "strsync.remote_is_master"  : false,
+    // if we should delete files not on the master
+    "strsync.delete_slave"      : true,
+
+}

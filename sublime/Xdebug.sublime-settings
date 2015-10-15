@@ -1,0 +1,8 @@
+{
+	"break_on_exception": false,
+	"path_mapping": {
+		"/box/www/vshen": "/box/www/current_local"
+	},
+	"pretty_output": true,
+	"url": "https://app.vshen.inside-box.net"
+}

@@ -1,0 +1,24 @@
+AceJump
+All AutoComplete
+ApacheConf.tmLanguage
+Babel
+BetterFindBuffer
+BlockCursorEverywhere
+ColorPicker
+Emmet
+Function Name Display
+Generic Config
+Git
+GitGutter
+JavascriptNext - ES6 Syntax
+Material Theme
+Origami
+PackageResourceViewer
+Python Improved
+PyV8
+Rsync SSH
+Smarty
+Text Pastry
+Theme - Spacegray
+WordHighlight
+Xdebug Client

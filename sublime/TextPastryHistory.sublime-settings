@@ -1,0 +1,113 @@
+{
+	"history":
+	[
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "80",
+					"text": "320"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 320 80"
+			},
+			"key": "4e8e2ba78ce3fc4b07f1218c84f2cad5",
+			"label": "as 320 80"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "40",
+					"text": "40"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 40 40"
+			},
+			"key": "c8858653b2d0d30b710092fa5e50bf9b",
+			"label": "as 40 40"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "1",
+					"text": "0"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 0 1"
+			},
+			"key": "61a517342bd4c47241fd248b96d65387",
+			"label": "as 0 1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "89",
+					"text": "0"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 0 89"
+			},
+			"key": "24c6a5a3f937ff64ae8ca0a5b1171af2",
+			"label": "as 0 89"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "80",
+					"text": "0"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 0 80"
+			},
+			"key": "e5b843cde973b6ed11ce36faf9fc7de8",
+			"label": "as 0 80"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "1",
+					"text": "51"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 51 1"
+			},
+			"key": "4231b75c9c94518f2061d2d938d274be",
+			"label": "as 51 1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"step_size": "80",
+					"text": "80"
+				},
+				"command": "text_pastry_auto_step",
+				"text": "as 80 80"
+			},
+			"key": "ed34153184e943b158b5bb07cc5877ea",
+			"label": "as 80 80"
+		}
+	],
+	"last_command":
+	{
+		"args":
+		{
+			"step_size": "80",
+			"text": "80"
+		},
+		"command": "text_pastry_auto_step",
+		"text": "as 80 80"
+	}
+}
