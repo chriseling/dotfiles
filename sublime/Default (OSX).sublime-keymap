@@ -1,4 +1,5 @@
 [
+	// More sane tab traversal
 	{
 		"keys": ["ctrl+shift+tab"],
 		"command": "prev_view"
@@ -21,6 +22,7 @@
 			{"key": "setting.command_mode"}
 		],
 	},
+	// Origami keybindings
 	{
 		"keys": ["ctrl+a", "-"],
 		"command": "create_pane",
@@ -117,5 +119,19 @@
 		"keys": ["ctrl+p"],
 		"command": "show_overlay",
 		"args": {"overlay": "goto", "show_files": true}
+	},
+	// Vintage keymappings
+	{ "keys": ["ctrl+d"], "command": "set_motion", "args": {
+		"motion": "move",
+		"motion_args": {"by": "pages", "forward": true, "extend": true }},
+		"context": [{"key": "setting.command_mode"}, {"key": "setting.vintage_ctrl_keys"}]
+	},
+	{ "keys": ["ctrl+u"], "command": "set_motion", "args": {
+		"motion": "move",
+		"motion_args": {"by": "pages", "forward": false, "extend": true }},
+		"context": [{"key": "setting.command_mode"}, {"key": "setting.vintage_ctrl_keys"}]
+	},
+	{ "keys": [";"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": ":"},
+		"context": [{"key": "setting.command_mode"}]
 	},
 ]
