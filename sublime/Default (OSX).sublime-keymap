@@ -22,6 +22,30 @@
 		],
 	},
 	{
+		"keys": ["ctrl+a", "-"],
+		"command": "create_pane",
+		"context": [
+			{"key": "setting.command_mode"}
+		],
+		"args": {"direction": "down"}
+	},
+	{
+		"keys": ["ctrl+a", "|"],
+		"command": "create_pane",
+		"context": [
+			{"key": "setting.command_mode"}
+		],
+		"args": {"direction": "right"}
+	},
+	{
+		"keys": ["ctrl+q"],
+		"command": "destroy_pane",
+		"context": [
+			{"key": "setting.command_mode"}
+		],
+		"args": {"direction": "self"}
+	},
+	{
 		"keys": ["ctrl+h"],
 		"command": "travel_to_pane", "args": {"direction": "left"},
 		"context": [
