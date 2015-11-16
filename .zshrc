@@ -83,3 +83,6 @@ alias dev='git checkout v5-dev && git pull && wsy'
 export PATH=/box/www/devtools_readonly/bin:$PATH
 ulimit -n 2560
 export PHANTOMJS_BIN=/usr/local/bin/phantomjs
+
+export NVM_DIR="/Users/vshen/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
