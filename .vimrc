@@ -19,7 +19,7 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'ap/vim-css-color'
 Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'rking/ag.vim'
+"Plugin 'rking/ag.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'chriskempson/base16-vim'
 Plugin 'blueyed/smarty.vim'
@@ -79,10 +79,10 @@ let g:sneak#use_ic_scs = 1
 let g:ag_working_path_mode="r"
 " Make Ag.vim not automatically open first search result, and
 " ignore case
-ca Ag Ag! -i -p '~/.agignore' --ignore-dir test --ignore-dir css
-ca Agt Ag! -i -p '~/.agignore' --ignore-dir css
-ca Agc Ag! -i -p '~/.agignore' --ignore-dir test
-ca Agtc Ag! -i
+"ca Ag Ag! -i -p '~/.agignore' --ignore-dir test --ignore-dir css
+"ca Agt Ag! -i -p '~/.agignore' --ignore-dir css
+"ca Agc Ag! -i -p '~/.agignore' --ignore-dir test
+"ca Agtc Ag! -i
 
 " Make delimitMate stop expanding < into <>
 let delimitMate_matchpairs = "(:),[:],{:}"
