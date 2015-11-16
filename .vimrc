@@ -92,6 +92,7 @@ let g:netrw_liststyle=3
 map <C-e> ;Explore<cr>
 
 set listchars=nbsp:_,trail:.
+set list
 set virtualedit=onemore
 
 " Remap colon to semicolon cuz lazy
