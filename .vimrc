@@ -194,5 +194,11 @@ set fillchars+=vert:\|
 set pastetoggle=<F2>
 
 " FZF stuff
-nnoremap <C-p> :FZF<cr>
+nnoremap <C-p> :FZF -m -i<cr>
 nnoremap <C-b> :Buffers<cr>
+
+" Close buffers without closing splits
+nnoremap <C-c> :bp\|bd #<CR>
+
+" Map jk to exit insert mode
+imap jk <Esc>
