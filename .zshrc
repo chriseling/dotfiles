@@ -18,19 +18,6 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # User configuration
-export FSEM=~/dotfiles/fs-easymotion
-source $FSEM/easycd.sh
-source $FSEM/easygrep.sh
-source $FSEM/easyfind.sh
-
-alias u='easyCdUp'
-alias f='easyFind'
-alias ff='easyFindOpen'
-alias g='easyGrep'
-alias gg='easyGrepOpen'
-
-export EASYCD_REPLACE_FIRST_CHAR=0
-
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
