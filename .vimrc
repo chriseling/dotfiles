@@ -74,7 +74,7 @@ let g:sneak#use_ic_scs = 1
 
 " Ag.vim binds
 " Make ag always search from root directory
-let g:ag_working_path_mode="r"
+" let g:ag_working_path_mode="r"
 " Make Ag.vim not automatically open first search result, and
 " ignore case
 "ca Ag Ag! -i -p '~/.agignore' --ignore-dir test --ignore-dir css
