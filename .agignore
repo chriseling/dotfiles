@@ -1,0 +1,10 @@
+*tmp/*
+*generated/models/*
+*generated-resources/*
+*external/*
+*img/*
+*.zip
+*vendor/*
+*.git
+*node_modules/asset-pipeline*
+
