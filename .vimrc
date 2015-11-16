@@ -194,6 +194,9 @@ set pastetoggle=<F2>
 " FZF stuff
 nnoremap <C-p> :FZF -m -i<cr>
 nnoremap <C-b> :Buffers<cr>
+nnoremap <C-i> :History<cr>
+nnoremap <C-m> :Marks<cr>
+nnoremap <C-f> :Ag<cr>
 
 " Close buffers without closing splits
 nnoremap <C-c> :bp\|bd #<CR>
