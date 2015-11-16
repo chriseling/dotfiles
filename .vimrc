@@ -61,18 +61,18 @@ let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
 
 " Ctrl-P plugin commands
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-set wildignore+=*vendor/*,*/tmp/*,*/generated/*,*/img/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_max_files = 0
-let g:ctrlp_max_height = 20
-let g:ctrlp_match_window = 'results:30'
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-let g:ctrlp_by_filename = 1
-let g:ctrlp_show_hidden = 1
-let g:ctrlp_clear_cache_on_exit = 0
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
+" set wildignore+=*vendor/*,*/tmp/*,*/generated/*,*/img/*,*.so,*.swp,*.zip
+" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" let g:ctrlp_max_files = 0
+" let g:ctrlp_max_height = 20
+" let g:ctrlp_match_window = 'results:30'
+" let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" let g:ctrlp_by_filename = 1
+" let g:ctrlp_show_hidden = 1
+" let g:ctrlp_clear_cache_on_exit = 0
 
 " Ag.vim binds
 " Make ag always search from root directory
