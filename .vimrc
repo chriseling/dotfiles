@@ -6,7 +6,6 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ervandew/supertab'
-"Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'derekwyatt/vim-scala'
 "Plugin 'Lokaltog/vim-easymotion'
