@@ -64,25 +64,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g "" -p ~/.agignore'
 export FZF_DEFAULT_OPTS='-m -i'
-#-----------------------------BOX SPECIFIC CONFIG-----------------------------
-# alias for box root directory
-alias c='cd /box/www/current_local'
-alias p='cd ~/performance'
-alias pt='cd ~/performance/tombstones-memorialist'
-alias pb='cd ~/performance/brainy'
-
-# work aliases
-alias wsy='work sync'
-alias wsa='work save'
-alias wr='~/review.sh'
-alias wt='work test'
-alias wo='work --no-limit'
-alias dev='git checkout v5-dev && git pull && wsy'
-
-# add devtools to PATH
-export PATH=/box/www/devtools_readonly/bin:$PATH
-ulimit -n 2560
-export PHANTOMJS_BIN=/usr/local/bin/phantomjs
 
 export NVM_DIR="/Users/vshen/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
