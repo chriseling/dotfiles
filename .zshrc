@@ -37,6 +37,7 @@ alias gl='git log'
 alias gpl='git pull'
 alias gpu='git push'
 alias gs='git status'
+alias checkout='git checkout $(git branch | fzf-tmux -d 15)'
 alias tmux='tmux -2'
 
 # convenience aliases for editing configs
