@@ -63,7 +63,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag -g "" -p ~/.agignore'
+export FZF_DEFAULT_COMMAND='git ls-tree -r --name-only HEAD'
 export FZF_DEFAULT_OPTS='-m -i'
 
 export NVM_DIR="/Users/vshen/.nvm"
