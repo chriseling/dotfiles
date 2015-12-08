@@ -6,3 +6,5 @@ alias start='vagrant up; vagrant ssh'
 alias stop='vagrant halt'
 alias tmux='tmux; . ~/.bashrc'
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
