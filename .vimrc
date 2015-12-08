@@ -21,6 +21,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'blueyed/smarty.vim'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 
@@ -157,12 +158,13 @@ cmap w!! w !sudo tee > /dev/null %
 
 " Set color of vertical split border
 set fillchars+=vert:\|
-"
+
 " Proper pasting from outside applications
 set pastetoggle=<F2>
 
 " FZF stuff
-nnoremap <C-p> :FZF -m -i<cr>
+nnoremap <C-t> :Files<cr>
+nnoremap <C-p> :GitFiles<cr>
 nnoremap <C-g> :Ag
 nnoremap <C-b> :Buffers<cr>
 nnoremap <C-i> :History<cr>
