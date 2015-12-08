@@ -174,9 +174,9 @@ nnoremap <C-f> :BLines<cr>
 " Close buffers without closing splits
 nnoremap <C-c> :bp\|bd #<CR>
 
-" Cycle through buffers with bn and bp
-nnoremap bp :bprevious<cr>
-nnoremap bn :bnext<cr>
-
 " Map jk to exit insert mode
 imap jk <Esc>
+
+" Perf stuff
+set lazyredraw
+set ttyfast
