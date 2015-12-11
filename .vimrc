@@ -75,7 +75,9 @@ set copyindent
 set preserveindent
 set autoindent
 
-" Using hard tabs for javascript, html, tmpl
+set listchars=tab:\|-,nbsp:_,trail:.
+
+" Using hard tabs for javascript, css
 autocmd Filetype * setlocal sts=0 noexpandtab
 " Using 4 spaces for php
 autocmd Filetype php setlocal sts=4 expandtab
