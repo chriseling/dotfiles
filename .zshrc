@@ -37,7 +37,6 @@ alias gl='git log'
 alias gpl='git pull'
 alias gpu='git push'
 alias gs='git status'
-alias checkout='git checkout $(git branch | fzf-tmux --tac -d 15)'
 alias tmux='tmux -2'
 
 # convenience aliases for editing configs
@@ -65,6 +64,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -p ~/.agignore -g ""'
 export FZF_DEFAULT_OPTS='-m -i'
+# git with FZF aliases
+alias add='git add $(git diff --name-only | fzf-tmux --tac -d 15)'
+alias diff='git diff $(git diff --name-only | fzf-tmux --tac -d 15)'
+alias checkout='git checkout $(git branch | fzf-tmux --tac -d 15)'
 
 export NVM_DIR="/Users/vshen/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
