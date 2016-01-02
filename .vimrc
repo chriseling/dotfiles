@@ -1,29 +1,29 @@
 set nocompatible
 
-" Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'ervandew/supertab'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'derekwyatt/vim-scala'
-"Plugin 'Lokaltog/vim-easymotion'
-Plugin 'justinmk/vim-sneak'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'ap/vim-css-color'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'chriskempson/base16-vim'
-Plugin 'blueyed/smarty.vim'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'Raimondi/delimitMate'
+Plug 'gmarik/Vundle.vim'
+Plug 'ervandew/supertab'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'derekwyatt/vim-scala'
+"Plug 'Lokaltog/vim-easymotion'
+Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'ap/vim-css-color'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
+Plug 'blueyed/smarty.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'kristijanhusak/vim-hybrid-material'
 
-call vundle#end()
+" Add plugins to &runtimepath
+call plug#end()
 
 set number
 syntax enable
