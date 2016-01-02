@@ -79,10 +79,11 @@ set autoindent
 
 set listchars=tab:\|-,nbsp:_,trail:.
 
+" Using 4 spaces by default
+autocmd Filetype * setlocal sts=4 expandtab
 " Using hard tabs for javascript, css
-autocmd Filetype * setlocal sts=0 noexpandtab
-" Using 4 spaces for php
-autocmd Filetype php setlocal sts=4 expandtab
+autocmd Filetype javascript setlocal sts=0 noexpandtab
+autocmd Filetype css setlocal sts=0 noexpandtab
 " Template file syntax highlighting
 au BufRead,BufNewFile *.tmpl set filetype=smarty
 
