@@ -40,6 +40,8 @@ set ffs=unix,dos,mac
 
 " Set to auto read when a file is changed from the outside
 set autoread
+" Set to write when focus is lost
+set autowriteall
 
 " Turn off backups
 set nobackup
