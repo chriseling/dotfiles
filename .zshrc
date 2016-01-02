@@ -65,9 +65,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 export FZF_DEFAULT_COMMAND='ag -p ~/.agignore -g ""'
 export FZF_DEFAULT_OPTS='-m -i'
 # git with FZF aliases
-alias add='git add $(git diff --name-only | fzf-tmux --tac -d 15)'
-alias diff='git diff $(git diff --name-only | fzf-tmux --tac -d 15)'
+alias add='git add $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 alias checkout='git checkout $(git branch | fzf-tmux --tac -d 15)'
+alias diff='git diff $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
+alias undo='git checkout -- $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 
 export NVM_DIR="/Users/vshen/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
