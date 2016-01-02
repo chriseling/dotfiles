@@ -170,11 +170,11 @@ set pastetoggle=<F2>
 " FZF stuff
 nnoremap <C-t> :Files<cr>
 nnoremap <C-p> :GitFiles<cr>
-nnoremap <C-g> :Ag
+nnoremap <C-g> :Tags<cr>
 nnoremap <C-b> :Buffers<cr>
 nnoremap <C-i> :History<cr>
 nnoremap <C-m> :Marks<cr>
-nnoremap <C-f> :BLines<cr>
+nnoremap <C-f> :BTags<cr>
 
 " Close buffers without closing splits
 nnoremap <C-c> :bp\|bd #<CR>
