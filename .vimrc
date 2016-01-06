@@ -182,3 +182,5 @@ imap jk <Esc>
 " Perf stuff
 set lazyredraw
 set ttyfast
+
+let g:tmux_navigator_save_on_switch = 1
