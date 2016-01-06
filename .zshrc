@@ -61,13 +61,18 @@ export XDEBUG_CONFIG="idekey=sublime.xdebug"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
+# FZF Config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='ag -p ~/.agignore -g ""'
-export FZF_DEFAULT_OPTS='-m -i'
+export FZF_DEFAULT_COMMAND='locate "$PWD/"'
+export FZF_DEFAULT_OPTS='
+  -m -i
+  --bind ctrl-d:page-down,ctrl-u:page-up
+'
 # git with FZF aliases
 alias add='git add $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 alias checkout='git checkout $(git branch | fzf-tmux --tac -d 15)'
 alias diff='git diff $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
+alias show='git show --pretty="format:" $(git show --pretty="format:" --name-only | fzf-tmux --tac -d 15)'
 alias undo='git checkout -- $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 
 export NVM_DIR="/Users/vshen/.nvm"
