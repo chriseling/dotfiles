@@ -51,7 +51,7 @@ set noswapfile
 filetype plugin indent on
 
 " Map leader key
-let mapleader = ","
+let mapleader = " "
 
 " Vim-Sneak config
 let g:sneak#s_next = 1
