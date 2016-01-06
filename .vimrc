@@ -16,11 +16,11 @@ Plug 'ap/vim-css-color'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'airblade/vim-gitgutter'
 Plug 'chriskempson/base16-vim'
-Plug 'blueyed/smarty.vim'
-Plug 'junegunn/fzf'
+Plug 'blueyed/smarty.vim', { 'for': 'smarty' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Raimondi/delimitMate'
-Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'Shougo/deoplete.nvim'
 
 " Add plugins to &runtimepath
 call plug#end()
