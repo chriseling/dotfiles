@@ -30,6 +30,10 @@ export VISUAL=$EDITOR
 export TERM=xterm-256color
 export TODOTXT_DEFAULT_ACTION=ls
 
+# alias vim to neovim
+alias vim='nvim'
+
+# git aliases
 alias ga='git add'
 alias gc='git commit -m'
 alias gd='git diff'
@@ -75,5 +79,7 @@ alias diff='git diff $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 alias show='git show --pretty="format:" $(git show --pretty="format:" --name-only | fzf-tmux --tac -d 15)'
 alias undo='git checkout -- $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 
-export NVM_DIR="/Users/vshen/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+# source work specific config
+source ~/.config/work.zsh
