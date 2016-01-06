@@ -97,9 +97,6 @@ set smartcase
 set scrolljump=5
 set scrolloff=3
 
-" Make colors correct
-set term=screen-256color
-
 " Status line stuff
 set laststatus=2
 set statusline=%f
