@@ -35,7 +35,7 @@ alias vim='nvim'
 
 # git aliases
 alias ga='git add'
-alias gc='git commit -m'
+alias gc='git commit'
 alias gd='git diff'
 alias gl='git log'
 alias gpl='git pull'
