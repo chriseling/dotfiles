@@ -91,7 +91,7 @@ autocmd Filetype * setlocal sts=4 expandtab
 autocmd Filetype javascript setlocal sts=0 noexpandtab
 autocmd FileType css setlocal sts=0 noexpandtab omnifunc=csscomplete#CompleteCSS noci
 " Template file syntax highlighting
-au BufRead,BufNewFile *.tmpl set filetype=smarty
+au BufRead,BufNewFile *.tmpl set filetype=smarty.html
 
 " Search stuff
 set incsearch
