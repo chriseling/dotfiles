@@ -25,6 +25,7 @@ Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 Plug 'https://github.com/mxw/vim-jsx.git'
+Plug 'https://github.com/othree/csscomplete.vim.git'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -87,7 +88,7 @@ set listchars=tab:\|-,nbsp:_,trail:.
 autocmd Filetype * setlocal sts=4 expandtab
 " Using hard tabs for javascript, css
 autocmd Filetype javascript setlocal sts=0 noexpandtab
-autocmd Filetype css setlocal sts=0 noexpandtab
+autocmd FileType css setlocal sts=0 noexpandtab omnifunc=csscomplete#CompleteCSS noci
 " Template file syntax highlighting
 au BufRead,BufNewFile *.tmpl set filetype=smarty
 
