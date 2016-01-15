@@ -23,6 +23,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim'
 Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
+Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
+Plug 'https://github.com/mxw/vim-jsx.git'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -59,8 +61,8 @@ let mapleader = " "
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
 
-" Make delimitMate stop expanding < into <>
-let delimitMate_matchpairs = "(:),[:],{:}"
+let g:jsx_ext_required = 0
+let g:used_javascript_libs = 'react'
 
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
