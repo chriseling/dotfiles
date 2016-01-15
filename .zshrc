@@ -83,6 +83,13 @@ alias diff='git diff $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 alias show='git show --pretty="format:" $(git show --pretty="format:" --name-only | fzf-tmux --tac -d 15)'
 alias undo='git checkout -- $(git diff --name-only HEAD | fzf-tmux --tac -d 15)'
 
+# tmuxinator aliases
+alias etu='cd ~/.tmuxinator; vim'
+alias dtop='tmux attach-session -t desktop'
+alias ltop='tmux attach-session -t laptop'
+alias desktop='mux desktop && dtop'
+alias laptop='mux laptop && ltop'
+
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # source work specific config
