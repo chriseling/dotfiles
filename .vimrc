@@ -167,6 +167,9 @@ cmap w!! w !sudo tee > /dev/null %
 " Set color of vertical split border
 set fillchars+=vert:\|
 
+" Mapping to copy to system clipboard
+vnoremap <C-y> "+y
+
 " Proper pasting from outside applications
 set pastetoggle=<F2>
 
