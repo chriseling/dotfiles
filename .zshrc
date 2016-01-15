@@ -47,6 +47,10 @@ alias tmux='tmux -2'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+alias ew='vim ~/.config/work.zsh'
+
+# reload this config file
+alias so='source ~/.zshrc'
 
 # alias for sudo
 alias oops='sudo $(fc -ln -1)'
