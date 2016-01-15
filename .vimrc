@@ -182,6 +182,9 @@ nnoremap <C-i> :History<cr>
 nnoremap <C-m> :Marks<cr>
 nnoremap <C-f> :BTags<cr>
 
+" Grepper Aliases
+cabbrev ag Grepper! -tool ag -open -switch
+
 " Close buffers without closing splits
 nnoremap <C-c> :bp\|bd #<CR>
 
