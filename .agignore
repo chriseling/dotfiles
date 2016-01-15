@@ -7,4 +7,5 @@
 *vendor/*
 *.git
 *node_modules/asset-pipeline*
+*.min.*
 
