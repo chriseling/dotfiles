@@ -26,6 +26,7 @@ Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'https://github.com/othree/csscomplete.vim.git'
+Plug 'https://github.com/othree/yajs.vim.git'
 
 " Add plugins to &runtimepath
 call plug#end()
