@@ -2,7 +2,6 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'https://github.com/gmarik/Vundle.vim.git'
 Plug 'https://github.com/ervandew/supertab.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
 Plug 'https://github.com/derekwyatt/vim-scala.git'
