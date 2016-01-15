@@ -22,6 +22,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim'
 Plug 'https://github.com/tmux-plugins/vim-tmux.git'
+Plug 'https://github.com/morhetz/gruvbox.git'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -31,7 +32,7 @@ syntax enable
 set background=dark
 let g:solarized_termcolors = 256
 let base16colorspace=256
-colorscheme base16-eighties
+colorscheme gruvbox
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
