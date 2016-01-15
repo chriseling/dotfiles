@@ -21,6 +21,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/deoplete.nvim'
+Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 
 " Add plugins to &runtimepath
 call plug#end()
