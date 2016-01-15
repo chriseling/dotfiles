@@ -188,3 +188,13 @@ set lazyredraw
 set ttyfast
 
 let g:tmux_navigator_save_on_switch = 1
+
+"create splits using C+w+- and C+w+|
+map <silent> <C-w>- :sp<CR>
+map <silent> <C-w>\| :vsp<CR>
+
+" Resizing windows
+map <silent> <C-w>k :res +5<CR>
+map <silent> <C-w>j :res -5<CR>
+map <silent> <C-w>h :vertical resize -5<CR>
+map <silent> <C-w>l :vertical resize +5<CR>
