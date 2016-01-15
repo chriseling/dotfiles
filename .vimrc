@@ -2,25 +2,26 @@ set nocompatible
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'gmarik/Vundle.vim'
-Plug 'ervandew/supertab'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'derekwyatt/vim-scala'
-"Plug 'Lokaltog/vim-easymotion'
-Plug 'justinmk/vim-sneak'
-Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
-Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'ap/vim-css-color'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
-Plug 'blueyed/smarty.vim', { 'for': 'smarty' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'Raimondi/delimitMate'
-Plug 'Shougo/deoplete.nvim'
+Plug 'https://github.com/gmarik/Vundle.vim.git'
+Plug 'https://github.com/ervandew/supertab.git'
+Plug 'https://github.com/terryma/vim-multiple-cursors.git'
+Plug 'https://github.com/derekwyatt/vim-scala.git'
+"Plug 'https://github.com/Lokaltog/vim-easymotion.git'
+Plug 'https://github.com/justinmk/vim-sneak.git'
+Plug 'https://github.com/tpope/vim-fugitive.git'
+Plug 'https://github.com/bling/vim-airline.git'
+Plug 'https://github.com/pangloss/vim-javascript.git'
+Plug 'https://github.com/jelera/vim-javascript-syntax.git'
+Plug 'https://github.com/ap/vim-css-color.git'
+Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
+Plug 'https://github.com/airblade/vim-gitgutter.git'
+Plug 'https://github.com/chriskempson/base16-vim.git'
+Plug 'https://github.com/blueyed/smarty.vim.git', { 'for': 'smarty' }
+Plug 'https://github.com/junegunn/fzf.git', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'https://github.com/junegunn/fzf.vim.git'
+Plug 'https://github.com/Raimondi/delimitMate.git'
+Plug 'https://github.com/Shougo/deoplete.nvim.git'
+Plug 'https://github.com/mhinz/vim-grepper.git'
 Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
@@ -191,7 +192,7 @@ set ttyfast
 
 let g:tmux_navigator_save_on_switch = 1
 
-"create splits using C+w+- and C+w+|
+" Create splits using C+w+- and C+w+|
 map <silent> <C-w>- :sp<CR>
 map <silent> <C-w>\| :vsp<CR>
 
