@@ -22,7 +22,6 @@ Plug 'https://github.com/Raimondi/delimitMate.git'
 Plug 'https://github.com/Shougo/deoplete.nvim.git'
 Plug 'https://github.com/mhinz/vim-grepper.git'
 Plug 'https://github.com/tmux-plugins/vim-tmux.git'
-Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'https://github.com/othree/csscomplete.vim.git'
@@ -38,7 +37,7 @@ syntax enable
 set background=dark
 let g:solarized_termcolors = 256
 let base16colorspace=256
-colorscheme gruvbox
+colorscheme base16-eighties
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
