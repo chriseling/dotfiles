@@ -27,6 +27,8 @@ Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
 Plug 'https://github.com/mxw/vim-jsx.git'
 Plug 'https://github.com/othree/csscomplete.vim.git'
 Plug 'https://github.com/othree/yajs.vim.git'
+Plug 'https://github.com/benekastah/neomake.git'
+Plug 'https://github.com/othree/html5.vim.git'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -89,9 +91,10 @@ set listchars=tab:\|-,nbsp:_,trail:.
 autocmd Filetype * setlocal sts=4 expandtab
 " Using hard tabs for javascript, css
 autocmd Filetype javascript setlocal sts=0 noexpandtab
+autocmd Filetype javascript.jsx setlocal sts=0 noexpandtab
 autocmd FileType css setlocal sts=0 noexpandtab omnifunc=csscomplete#CompleteCSS noci
 " Template file syntax highlighting
-au BufRead,BufNewFile *.tmpl set filetype=smarty.html
+autocmd BufRead,BufNewFile *.tmpl set filetype=smarty.html
 
 " Search stuff
 set incsearch
@@ -206,3 +209,22 @@ map <silent> <C-w>k :res +5<CR>
 map <silent> <C-w>j :res -5<CR>
 map <silent> <C-w>h :vertical resize -5<CR>
 map <silent> <C-w>l :vertical resize +5<CR>
+
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_maker = {
+    \ 'exe': $PWD .'/node_modules/bin/eslint.js',
+    \ 'args': ['-f', 'compact', '--rulesdir=tools/js/eslint-rules'],
+    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+    \ '%W%f: line %l\, col %c\, Warning - %m'
+    \ }
+let g:neomake_jsx_eslint_maker = {
+    \ 'exe': $PWD .'/node_modules/bin/eslint.js',
+    \ 'args': ['-f', 'compact', '--rulesdir=tools/js/eslint-rules'],
+    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+    \ '%W%f: line %l\, col %c\, Warning - %m'
+    \ }
+
+" Default selection order starts from the bottom of the completion list,
+" which is almost always too specific. Reverse it so that selection
+" goes from general->specific
+let g:SuperTabDefaultCompletionType = "<c-n>"
