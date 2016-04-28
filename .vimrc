@@ -4,12 +4,13 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/ervandew/supertab.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-Plug 'https://github.com/derekwyatt/vim-scala.git', { 'for': 'scala' }
-Plug 'https://github.com/easymotion/vim-easymotion.git'
+Plug 'https://github.com/derekwyatt/vim-scala.git'
+"Plug 'https://github.com/Lokaltog/vim-easymotion.git'
 Plug 'https://github.com/justinmk/vim-sneak.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/bling/vim-airline.git'
-Plug 'https://github.com/vim-airline/vim-airline-themes'
+"Plug 'https://github.com/pangloss/vim-javascript.git'
+"Plug 'https://github.com/jelera/vim-javascript-syntax.git'
 Plug 'https://github.com/ap/vim-css-color.git'
 Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
@@ -19,23 +20,14 @@ Plug 'https://github.com/junegunn/fzf.git', { 'dir': '~/.fzf', 'do': './install 
 Plug 'https://github.com/junegunn/fzf.vim.git'
 Plug 'https://github.com/Raimondi/delimitMate.git'
 Plug 'https://github.com/Shougo/deoplete.nvim.git'
+Plug 'https://github.com/mhinz/vim-grepper.git'
 Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
-Plug 'https://github.com/mxw/vim-jsx.git', { 'for': 'jsx' }
-Plug 'https://github.com/othree/csscomplete.vim.git', { 'for': 'css' }
-Plug 'https://github.com/othree/yajs.vim.git', { 'for': 'javascript' }
+Plug 'https://github.com/mxw/vim-jsx.git'
+Plug 'https://github.com/othree/csscomplete.vim.git'
+Plug 'https://github.com/othree/yajs.vim.git'
 Plug 'https://github.com/benekastah/neomake.git'
 Plug 'https://github.com/othree/html5.vim.git'
-Plug 'https://github.com/mattn/emmet-vim.git', { 'for': 'smarty.html' }
-Plug 'https://github.com/StanAngeloff/php.vim.git', { 'for': 'php' }
-"Plug 'https://github.com/ternjs/tern_for_vim.git', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install', 'for': 'javascript' }
-Plug 'https://github.com/joshdick/onedark.vim.git'
-Plug 'https://github.com/joshdick/airline-onedark.vim.git'
-Plug 'https://github.com/mhinz/vim-startify.git'
-Plug 'https://github.com/joonty/vdebug.git'
-Plug 'https://github.com/mhartington/oceanic-next.git'
-Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/tpope/vim-repeat.git'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -45,8 +37,7 @@ syntax enable
 set background=dark
 let g:solarized_termcolors = 256
 let base16colorspace=256
-let g:onedark_termcolors = 256
-colorscheme onedark
+colorscheme base16-eighties
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -73,12 +64,12 @@ let mapleader = " "
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
 
-let g:jsx_ext_required = 1
+let g:jsx_ext_required = 0
 let g:used_javascript_libs = 'react'
 
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
-nnoremap <C-e> :Explore<cr>
+map <C-e> ;Explore<cr>
 
 set virtualedit=onemore
 
@@ -93,7 +84,6 @@ set copyindent
 set preserveindent
 set autoindent
 
-set list
 set listchars=tab:\|-,nbsp:_,trail:.
 
 " Using 4 spaces by default
@@ -194,11 +184,14 @@ nnoremap <C-i> :History<cr>
 nnoremap <C-m> :Marks<cr>
 nnoremap <C-f> :BTags<cr>
 
+" Grepper Aliases
+cabbrev ag Grepper! -tool ag -open -switch
+
 " Close buffers without closing splits
 nnoremap <C-c> :bp\|bd #<CR>
 
 " Map jk to exit insert mode
-inoremap jk <Esc>
+imap jk <Esc>
 
 " Perf stuff
 set lazyredraw
@@ -216,47 +209,21 @@ map <silent> <C-w>j :res -5<CR>
 map <silent> <C-w>h :vertical resize -5<CR>
 map <silent> <C-w>l :vertical resize +5<CR>
 
-let g:neomake_css_enabled_makers = []
-let g:neomake_php_enabled_makers = ['php']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_maker = {
-    \ 'exe': '/usr/local/bin/eslint',
-    \ 'args': ['-f', 'compact', '--rulesdir=./tools/js/eslint-rules'],
+    \ 'exe': $PWD .'/node_modules/bin/eslint.js',
+    \ 'args': ['-f', 'compact', '--rulesdir=tools/js/eslint-rules'],
     \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
     \ '%W%f: line %l\, col %c\, Warning - %m'
     \ }
-let g:neomake_logfile="./neomake.log"
-autocmd! BufWritePost * Neomake
+let g:neomake_jsx_eslint_maker = {
+    \ 'exe': $PWD .'/node_modules/bin/eslint.js',
+    \ 'args': ['-f', 'compact', '--rulesdir=tools/js/eslint-rules'],
+    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+    \ '%W%f: line %l\, col %c\, Warning - %m'
+    \ }
 
 " Default selection order starts from the bottom of the completion list,
 " which is almost always too specific. Reverse it so that selection
 " goes from general->specific
 let g:SuperTabDefaultCompletionType = "<c-n>"
-
-let g:user_emmet_leader_key='<C-E>'
-let g:user_emmet_mode='i'
-
-function! PhpSyntaxOverride()
-  hi! def link phpDocTags  phpDefine
-  hi! def link phpDocParam phpType
-endfunction
-
-augroup phpSyntaxOverride
-  autocmd!
-  autocmd FileType php call PhpSyntaxOverride()
-augroup END
-
-" Easymotion config
-map <Leader> <Plug>(easymotion-prefix)
-nmap s <Plug>(easymotion-s2)
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-map <Leader>h <Plug>(easymotion-linebackward)
-let g:EasyMotion_startofline = 1
-let g:EasyMotion_smartcase = 1
-
-let g:startify_change_to_dir = 0
-let g:startify_change_to_vcs_root = 1
-
-set tags=/box/www/current_local/tags
