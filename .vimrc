@@ -4,13 +4,12 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/ervandew/supertab.git'
 Plug 'https://github.com/terryma/vim-multiple-cursors.git'
-Plug 'https://github.com/derekwyatt/vim-scala.git'
-"Plug 'https://github.com/Lokaltog/vim-easymotion.git'
+Plug 'https://github.com/derekwyatt/vim-scala.git', { 'for': 'scala' }
+Plug 'https://github.com/easymotion/vim-easymotion.git'
 Plug 'https://github.com/justinmk/vim-sneak.git'
 Plug 'https://github.com/tpope/vim-fugitive.git'
 Plug 'https://github.com/bling/vim-airline.git'
-"Plug 'https://github.com/pangloss/vim-javascript.git'
-"Plug 'https://github.com/jelera/vim-javascript-syntax.git'
+Plug 'https://github.com/vim-airline/vim-airline-themes'
 Plug 'https://github.com/ap/vim-css-color.git'
 Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
 Plug 'https://github.com/airblade/vim-gitgutter.git'
@@ -20,14 +19,31 @@ Plug 'https://github.com/junegunn/fzf.git', { 'dir': '~/.fzf', 'do': './install 
 Plug 'https://github.com/junegunn/fzf.vim.git'
 Plug 'https://github.com/Raimondi/delimitMate.git'
 Plug 'https://github.com/Shougo/deoplete.nvim.git'
-Plug 'https://github.com/mhinz/vim-grepper.git'
 Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 Plug 'https://github.com/othree/javascript-libraries-syntax.vim.git'
-Plug 'https://github.com/mxw/vim-jsx.git'
-Plug 'https://github.com/othree/csscomplete.vim.git'
-Plug 'https://github.com/othree/yajs.vim.git'
+Plug 'https://github.com/mxw/vim-jsx.git', { 'for': 'jsx' }
+Plug 'https://github.com/othree/csscomplete.vim.git', { 'for': 'css' }
+Plug 'https://github.com/othree/yajs.vim.git', { 'for': 'javascript' }
 Plug 'https://github.com/benekastah/neomake.git'
 Plug 'https://github.com/othree/html5.vim.git'
+Plug 'https://github.com/mattn/emmet-vim.git', { 'for': 'smarty.html' }
+Plug 'https://github.com/StanAngeloff/php.vim.git', { 'for': 'php' }
+Plug 'https://github.com/ternjs/tern_for_vim.git', { 'dir': '~/.vim/plugged/tern_for_vim', 'do': 'npm install', 'for': 'javascript' }
+Plug 'https://github.com/carlitux/deoplete-ternjs.git', { 'for': 'javascript' }
+Plug 'https://github.com/joshdick/onedark.vim.git'
+Plug 'https://github.com/joshdick/airline-onedark.vim.git'
+Plug 'https://github.com/mhinz/vim-startify.git'
+Plug 'https://github.com/joonty/vdebug.git'
+Plug 'https://github.com/mhartington/oceanic-next.git'
+Plug 'https://github.com/tpope/vim-surround.git'
+Plug 'https://github.com/tpope/vim-repeat.git'
+Plug 'https://github.com/tpope/vim-commentary.git'
+Plug 'https://github.com/editorconfig/editorconfig-vim.git'
+Plug 'https://github.com/mhinz/vim-grepper.git'
+Plug 'https://github.com/ddrscott/vim-side-search.git'
+Plug 'https://github.com/Shougo/vimfiler.vim.git'
+Plug 'https://github.com/Shougo/unite.vim.git'
+Plug 'https://github.com/w0ng/vim-hybrid.git'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -37,7 +53,8 @@ syntax enable
 set background=dark
 let g:solarized_termcolors = 256
 let base16colorspace=256
-colorscheme base16-eighties
+let g:onedark_termcolors = 256
+colorscheme OceanicNext
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
@@ -64,12 +81,12 @@ let mapleader = " "
 let g:sneak#s_next = 1
 let g:sneak#use_ic_scs = 1
 
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
 let g:used_javascript_libs = 'react'
 
 " Vim explorer mode shortcut and nerdtree-like display
 let g:netrw_liststyle=3
-map <C-e> ;Explore<cr>
+nnoremap <C-e> :Explore<cr>
 
 set virtualedit=onemore
 
@@ -84,12 +101,14 @@ set copyindent
 set preserveindent
 set autoindent
 
-set listchars=tab:\|-,nbsp:_,trail:.
+set list
+set showbreak=↪
+set listchars=tab:»\ ,nbsp:_,trail:.,eol:¬
 
 " Using 4 spaces by default
 autocmd Filetype * setlocal sts=4 expandtab
 " Using hard tabs for javascript, css
-autocmd Filetype javascript setlocal sts=0 noexpandtab
+autocmd Filetype javascript setlocal sts=0 noexpandtab omnifunc=tern#Complete
 autocmd Filetype javascript.jsx setlocal sts=0 noexpandtab
 autocmd FileType css setlocal sts=0 noexpandtab omnifunc=csscomplete#CompleteCSS noci
 " Template file syntax highlighting
@@ -113,6 +132,7 @@ set statusline+=%{fugitive#statusline()}
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+let g:airline_theme = 'oceanicnext'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_symbols.branch = ''
@@ -191,7 +211,7 @@ cabbrev ag Grepper! -tool ag -open -switch
 nnoremap <C-c> :bp\|bd #<CR>
 
 " Map jk to exit insert mode
-imap jk <Esc>
+inoremap jk <Esc>
 
 " Perf stuff
 set lazyredraw

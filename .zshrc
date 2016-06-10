@@ -27,11 +27,12 @@ export EDITOR='vim'
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 
-export TERM=xterm-256color
+export TERM='xterm-256color'
 export TODOTXT_DEFAULT_ACTION=ls
 
 # alias vim to neovim
 alias vim='nvim'
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 # git aliases
 alias ga='git add'
@@ -65,13 +66,9 @@ export CPPFLAGS=-Qunused-arguments
 # Xdebug for sublime
 export XDEBUG_CONFIG="idekey=sublime.xdebug"
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
-
 # FZF Config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='locate "$PWD/"'
+export FZF_DEFAULT_COMMAND='ag -p ~/.agignore -g ""'
 export FZF_DEFAULT_OPTS='
   -m -i
   --bind ctrl-d:page-down,ctrl-u:page-up
