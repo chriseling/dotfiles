@@ -243,6 +243,9 @@ let g:neomake_jsx_eslint_maker = {
     \ '%W%f: line %l\, col %c\, Warning - %m'
     \ }
 
+let g:neomake_logfile="./neomake.log"
+autocmd! BufWritePost * Neomake
+
 " Default selection order starts from the bottom of the completion list,
 " which is almost always too specific. Reverse it so that selection
 " goes from general->specific
