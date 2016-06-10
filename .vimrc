@@ -248,3 +248,33 @@ autocmd! BufWritePost * Neomake
 " which is almost always too specific. Reverse it so that selection
 " goes from general->specific
 let g:SuperTabDefaultCompletionType = "<c-n>"
+
+let g:user_emmet_leader_key='<C-E>'
+let g:user_emmet_mode='i'
+
+function! PhpSyntaxOverride()
+  hi! def link phpDocTags  phpDefine
+  hi! def link phpDocParam phpType
+endfunction
+
+augroup phpSyntaxOverride
+  autocmd!
+  autocmd FileType php call PhpSyntaxOverride()
+augroup END
+
+" Easymotion config
+map <Leader> <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-s2)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 1
+let g:EasyMotion_smartcase = 1
+
+let g:startify_change_to_dir = 0
+let g:startify_change_to_vcs_root = 1
+
+set completeopt-=preview
+
+set tags=./tags
