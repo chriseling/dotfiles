@@ -229,21 +229,19 @@ map <silent> <C-w>j :res -5<CR>
 map <silent> <C-w>h :vertical resize -5<CR>
 map <silent> <C-w>l :vertical resize +5<CR>
 
+let g:neomake_warning_sign={'text': 'W>'}
+let g:neomake_error_sign={'text': 'E>'}
+let g:neomake_css_enabled_makers = ['csslint']
+let g:neomake_php_enabled_makers = ['php']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_javascript_eslint_maker = {
-    \ 'exe': $PWD .'/node_modules/bin/eslint.js',
-    \ 'args': ['-f', 'compact', '--rulesdir=tools/js/eslint-rules'],
-    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-    \ '%W%f: line %l\, col %c\, Warning - %m'
-    \ }
-let g:neomake_jsx_eslint_maker = {
-    \ 'exe': $PWD .'/node_modules/bin/eslint.js',
-    \ 'args': ['-f', 'compact', '--rulesdir=tools/js/eslint-rules'],
+    \ 'exe': $PWD .'/node_modules/eslint/bin/eslint.js',
+    \ 'args': ['-f', 'compact', '--rulesdir', './tools/js/eslint-rules'],
     \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
     \ '%W%f: line %l\, col %c\, Warning - %m'
     \ }
 
-let g:neomake_logfile="./neomake.log"
+let g:neomake_logfile='./neomake.log'
 autocmd! BufWritePost * Neomake
 
 " Default selection order starts from the bottom of the completion list,
