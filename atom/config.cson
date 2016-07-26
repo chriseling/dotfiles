@@ -1,0 +1,204 @@
+"*":
+  "atom-autocomplete-php": {}
+  "atom-ctags":
+    extraTagFiles: "tags"
+  "atom-fuzzy-grep":
+    detectGitProjectAndUseGitGrep: false
+    escapeSelectedText: true
+    grepCommandString: "ag -i --nocolor --nogroup --column -p ~/.agignore"
+    minSymbolsToStartSearch: 5
+    showFullPath: true
+  "atom-lupa": {}
+  "atom-material-ui":
+    fonts: {}
+    tabs:
+      compactTabs: true
+    treeView:
+      compactList: true
+    ui:
+      animations: false
+      panelContrast: true
+      panelShadows: true
+  "atom-terminal-panel": {}
+  "atom-ternjs":
+    useSnippets: true
+    useSnippetsAndFunction: true
+  "autoclose-html":
+    additionalGrammars: [
+      "Smarty"
+    ]
+  "autocomplete-ctags":
+    maximumTagFileSize: 100
+  "autocomplete-plus":
+    backspaceTriggersAutocomplete: true
+    confirmCompletion: "enter"
+    scopeBlacklist: [
+      ".comment"
+    ]
+    useCoreMovementCommands: false
+  autoprefixer: {}
+  autosave:
+    enabled: true
+  clock:
+    format: false
+    icon: true
+  core:
+    allowPendingPaneItems: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+      "project-plus"
+      "node-debugger"
+      "atom-ctags"
+      "git-blame"
+      "language-bison"
+    ]
+    ignoredNames: [
+      ".git"
+      "*.min*"
+      "*/node_modules/*"
+      "*img/*"
+      "*.png"
+      "*.gif"
+      "*.jpg"
+      "*.jpeg"
+    ]
+    packagesWithKeymapsDisabled: [
+      "autocomplete-ctags"
+      "editorconfig"
+      "terminal-plus"
+      "git-grep-provider"
+      "merge-conflicts"
+      "phpunit"
+      "git-plus"
+      "yoceanic-next-syntax"
+      "atom-lupa"
+    ]
+    themes: [
+      "atom-material-ui"
+      "one-dark-syntax"
+    ]
+  docblockr:
+    return_tag: "@returns"
+  "easy-motion-redux": {}
+  editor:
+    fontSize: 12
+    invisibles: {}
+    lineHeight: 1.75
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    tabLength: 4
+  emmet: {}
+  "file-icons":
+    forceShow: true
+  "file-types":
+    tmpl: "source.smarty"
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "fuzzy-finder": {}
+  "git-plus": {}
+  jumpy: {}
+  "language-babel": {}
+  "lazy-motion": {}
+  linter:
+    gutterPosition: "Left"
+    lintOnFly: false
+    showErrorPanel: false
+    showErrorTabLine: true
+  "linter-eslint":
+    disableEslintIgnore: true
+    disableWhenNoEslintConfig: false
+    globalNodePath: "/usr/local"
+  "linter-php": {}
+  "merge-conflicts": {}
+  "mocha-runner": {}
+  "mocha-test-runner": {}
+  "node-debugger":
+    debugPort: 9876
+  nuclide:
+    installRecommendedPackages: true
+    "nuclide-arcanist": {}
+    "nuclide-buck-files": {}
+    "nuclide-clang-atom": {}
+    "nuclide-console": {}
+    "nuclide-datatip": {}
+    "nuclide-debugger-hhvm": {}
+    "nuclide-flow": {}
+    "nuclide-format-js": {}
+    "nuclide-hack": {}
+    "nuclide-health": {}
+    "nuclide-home":
+      showHome: false
+    "nuclide-ios-simulator-logs": {}
+    "nuclide-ocaml": {}
+    "nuclide-output": {}
+    "nuclide-react-native": {}
+    "nuclide-working-sets": {}
+  pigments:
+    supportedFiletypes: [
+      "*.css"
+    ]
+  "project-manager":
+    closeCurrent: true
+  "project-plus": {}
+  react:
+    enabledForAllJavascriptFiles: true
+  tabs:
+    enableVcsColoring: true
+  "terminal-panel":
+    logConsole: true
+    overrideLs: false
+  "terminal-plus":
+    core:
+      scrollback: 10000
+    style:
+      animationSpeed: 100
+      theme: "dracula"
+    toggles:
+      cursorBlink: false
+  "tool-bar":
+    visible: false
+  "vim-mode":
+    useClipboardAsDefaultRegister: false
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".ansi.text":
+  editor:
+    tabLength: 4
+".babel.regexp.source":
+  editor:
+    tabLength: 4
+".bison.source":
+  editor:
+    tabLength: 4
+".hack.html.text":
+  editor:
+    tabLength: 4
+".hackfragment.source":
+  editor:
+    tabLength: 4
+".hg-commit.text":
+  editor:
+    tabLength: 4
+".js.jsx.source":
+  editor:
+    tabLength: 4
+".smarty.source":
+  editor:
+    tabLength: 4
