@@ -68,7 +68,7 @@
     ignoredNames: [
       ".git"
       "*.min*"
-      "*/node_modules/*"
+      "node_modules"
       "*img/*"
       "*.png"
       "*.gif"
